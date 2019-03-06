@@ -1,0 +1,4 @@
+#!/bin/bash
+
+scp * t:~/trisweb-www/letterdraw/
+

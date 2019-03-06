@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0" />
+
+    <style>
+      body {
+        padding:10px; margin:0px; background-color: #ccc;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+      }
+      #main { margin: 10px auto 0px auto; }
+      p { color: #666; margin: 0; }
+      .progress {
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background-color: #99C;
+        top: 0px;
+        left: 0px;
+
+        opacity: 0;
+      }
+      .progress.start {
+        display: block;
+        animation: collapse 1s linear forwards;
+      }
+      @keyframes collapse {
+        0% {
+          width: 100%;
+          opacity: 0;
+        }
+        20% {
+          opacity: 1;
+        }
+        99% {
+          opacity: 1;
+        }
+        100% {
+          width: 0%;
+          opacity: 0;
+        }
+      }
+    </style>
+
+  <script src="draw.js"></script>
+</head>
+  <body>
+    <p>Draw a letter, clears after 1 second</p>
+    <div class="progress" id="progress-bar"></div>
+    <canvas id="main" width="300" height="450"></canvas>
+  </body>
+</html>
